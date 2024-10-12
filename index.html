@@ -7,6 +7,12 @@
     <title>Rohan Avalur's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- For icons -->
+    <!-- Link to WOW.js animation library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </head>
 <body>
 
@@ -50,19 +56,17 @@
         <div class="container">
             <h2>My Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <img src="images/project1.jpg" alt="Project 1">
-                    <h3>Project 1</h3>
-                    <p>A web application focused on security features.</p>
-                    <a href="https://github.com/rohanavalur/project1" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <img src="images/project2.jpg" alt="Project 2">
-                    <h3>Project 2</h3>
-                    <p>Building an interactive website using modern web technologies.</p>
-                    <a href="https://github.com/rohanavalur/project2" target="_blank">View on GitHub</a>
-                </div>
-                <!-- Add more projects as needed -->
+                <!-- Project 1: PIQuest -->
+                <a href="https://rohanavalur.github.io/" target="_blank" class="project-card">
+                    <div class="project-card--img">
+                        <img src="img/PIQuest.jpg" alt="PIQuest Project">
+                    </div>
+                    <div class="project-card--desc">
+                        <h3>Project 1: PIQuest</h3>
+                        <p>PIQuest: 150-Digit Challenge is a game designed to help people memorize the digits of Pi. The game includes sound effects and four difficulty levels (20, 60, 100, and 150 digits).</p>
+                    </div>
+                </a>
+                <!-- Add more projects here following the same format -->
             </div>
         </div>
     </section>
@@ -70,11 +74,39 @@
     <!-- Contact Section -->
     <section id="contact" class="section section-dark">
         <div class="container">
-            <h2>Contact Me</h2>
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
+            <h2>Contact Form</h2>
+            <form action="https://formspree.io/f/xanyynga" method="POST" class="contact-form">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s">
+                            <input name="name" id="name" type="text" class="form-control b-box" placeholder="Your Name *" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+                            <input name="email" id="email" type="email" class="form-control b-box" placeholder="Your Email *" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                            <input type="text" class="form-control b-box" id="subject" name="subject" placeholder="Your Subject..." required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
+                            <textarea name="message" id="message" rows="4" class="form-control b-box" placeholder="Your Message..." required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 mt-4 mb-5 text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".5s">
+                        <button type="submit" class="submitBnt btn hover-state">Send</button>
+                    </div>
+                </div>
             </form>
         </div>
     </section>
